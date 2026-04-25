@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LegalEase LK | AI-Powered Civil Law Assistance Platform | 25-26J-553</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#0d1b2a; --navy-mid:#1b2e45; --navy-light:#243d5a;
+  --gold:#c9a84c; --gold-light:#e8c97a;
+  --cream:#f9f6ef; --cream-dark:#ede8db;
+  --text:#1a1a2e; --muted:#5a6272;
+  --white:#ffffff; --border:#d4c9b0;
+  --teal:#0e7c7b; --teal-bg:#e0f4f4;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.7;}
+
+nav{background:var(--navy);position:sticky;top:0;z-index:100;border-bottom:2px solid var(--gold);}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);text-decoration:none;}
+.nav-logo span{display:block;font-family:'Source Sans 3',sans-serif;font-size:10px;color:#5a7a9a;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;}
+.nav-links{display:flex;list-style:none;}
+.nav-links a{display:block;padding:0 12px;height:60px;line-height:60px;color:#9aafca;text-decoration:none;font-size:13px;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s,background .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold-light);border-bottom-color:var(--gold);background:rgba(201,168,76,.06);}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--gold);margin:5px 0;}
+
+.hero{background:var(--navy);padding:70px 2rem 60px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(201,168,76,.035) 80px,rgba(201,168,76,.035) 81px);pointer-events:none;}
+.hero-badge{display:inline-block;background:rgba(201,168,76,.12);color:var(--gold-light);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:2px;border:1px solid rgba(201,168,76,.25);margin-bottom:20px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(24px,4.2vw,44px);font-weight:700;color:#fff;line-height:1.2;max-width:800px;margin:0 auto 12px;}
+.hero-sub{color:#7a9ab5;font-size:16px;font-weight:300;max-width:580px;margin:0 auto 8px;}
+.hero-name{color:var(--gold);font-size:13px;letter-spacing:1px;margin-bottom:26px;}
+.hero-divider{width:50px;height:2px;background:var(--gold);margin:0 auto 26px;}
+.hero-meta{display:flex;justify-content:center;flex-wrap:wrap;max-width:720px;margin:0 auto;border:1px solid rgba(201,168,76,.15);border-radius:4px;overflow:hidden;}
+.hmi{flex:1;min-width:130px;padding:13px 14px;text-align:center;border-right:1px solid rgba(201,168,76,.12);}
+.hmi:last-child{border-right:none;}
+.ml{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#3d607a;display:block;margin-bottom:4px;}
+.mv{font-size:13px;color:#9ab8cf;}
+
+section{display:none;max-width:1100px;margin:0 auto;padding:56px 2rem;}
+section.active{display:block;}
+.sh{margin-bottom:36px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.sl{font-size:10.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.st{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);}
+.sd{margin-top:8px;color:var(--muted);font-size:15px;}
+
+.dc{background:#fff;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:20px 24px;margin-bottom:14px;}
+.dc h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--navy);margin-bottom:7px;}
+.dc p{color:var(--muted);font-size:14.5px;}
+.dc ul,.dc ol{color:var(--muted);font-size:14.5px;padding-left:20px;margin-top:5px;}
+.dc ul li,.dc ol li{margin-bottom:3px;}
+
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+.hc{background:#fff;border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:0 0 4px 4px;padding:22px;}
+.hc h3{font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);margin-bottom:7px;}
+.hc p{color:var(--muted);font-size:14.5px;}
+.hc.t{border-top-color:var(--teal);}
+.hc.n{border-top-color:var(--navy);}
+.abs{background:#fff;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:0 4px 4px 0;padding:22px 26px;margin-bottom:28px;font-size:15.5px;color:#2d3650;line-height:1.9;}
+
+.tw{overflow-x:auto;border-radius:4px;border:1px solid var(--border);margin-bottom:22px;}
+table{width:100%;border-collapse:collapse;}
+thead th{background:var(--navy);color:var(--gold-light);padding:12px 16px;text-align:left;font-size:13px;font-weight:600;letter-spacing:.4px;white-space:nowrap;}
+tbody td{padding:12px 16px;border-bottom:1px solid var(--cream-dark);font-size:14.5px;background:#fff;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:var(--cream);}
+.b{display:inline-block;padding:3px 10px;border-radius:2px;font-size:12px;font-weight:600;}
+.bd{background:#e6f4ea;color:#2d7a3a;}
+.bu{background:#fff3e0;color:#b45309;}
+.bp{background:#f1f5fb;color:#2563a8;}
+
+.di{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--border);border-radius:4px;padding:15px 18px;margin-bottom:10px;text-decoration:none;color:inherit;transition:border-color .2s;}
+.di:hover{border-color:var(--gold);}
+.dico{width:38px;height:38px;background:var(--navy);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.dico svg{fill:var(--gold);}
+.dn{font-weight:600;font-size:15px;color:var(--navy);}
+.dm{font-size:13px;color:var(--muted);margin-top:2px;}
+.dl{font-size:13px;color:var(--gold);font-weight:600;white-space:nowrap;margin-left:auto;}
+
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
+.pc{background:var(--navy);border-radius:4px;padding:22px;color:#fff;position:relative;overflow:hidden;}
+.pc::after{content:'';position:absolute;bottom:-15px;right:-15px;width:80px;height:80px;border:2px solid rgba(201,168,76,.12);border-radius:50%;}
+.pn{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.pt{font-family:'Playfair Display',serif;font-size:16px;color:#fff;margin-bottom:6px;line-height:1.3;}
+.pd{font-size:13px;color:#5a8aaa;margin-bottom:16px;}
+.pb{display:inline-block;padding:6px 14px;background:rgba(201,168,76,.15);color:var(--gold-light);border:1px solid rgba(201,168,76,.3);border-radius:2px;font-size:13px;font-weight:600;text-decoration:none;transition:background .2s;}
+.pb:hover{background:rgba(201,168,76,.25);}
+.pc.dim .pt{color:#4a6a80;}
+.pc.dim .pb{opacity:.4;pointer-events:none;}
+
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:20px;}
+.mc{background:#fff;border:1px solid var(--border);border-radius:4px;padding:26px 20px;text-align:center;}
+.av{width:68px;height:68px;border-radius:50%;background:var(--navy);border:2px solid var(--gold);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);}
+.mn{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:3px;}
+.mid{font-size:12px;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;}
+.mr{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.me{font-size:13px;color:var(--gold);text-decoration:none;}
+.me:hover{text-decoration:underline;}
+.sc{background:#fff;border:1px solid var(--border);border-radius:4px;padding:18px 22px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start;}
+.sb{background:var(--navy);color:var(--gold);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:2px;white-space:nowrap;flex-shrink:0;margin-top:2px;}
+.sn{font-family:'Playfair Display',serif;font-size:16px;color:var(--navy);font-weight:600;margin-bottom:4px;}
+.sd2{font-size:14px;color:var(--muted);}
+
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:28px;}
+.cic{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:4px;padding:16px 18px;}
+.cii{width:36px;height:36px;background:var(--navy);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cii svg{fill:var(--gold);}
+.cit{font-weight:600;font-size:14px;color:var(--navy);margin-bottom:2px;}
+.civ{font-size:14px;color:var(--muted);}
+.fw{background:#fff;border:1px solid var(--border);border-radius:4px;padding:28px;}
+.fwt{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--cream-dark);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.fg{margin-bottom:14px;}
+.fg label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:5px;}
+.fg input,.fg select,.fg textarea{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:3px;font-family:'Source Sans 3',sans-serif;font-size:14.5px;color:var(--text);background:var(--cream);outline:none;transition:border-color .2s;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:#fff;}
+.fg textarea{resize:vertical;min-height:100px;}
+.bs{background:var(--navy);color:var(--gold-light);border:1px solid var(--navy);padding:10px 26px;font-family:'Source Sans 3',sans-serif;font-size:14.5px;font-weight:600;border-radius:3px;cursor:pointer;transition:background .2s;}
+.bs:hover{background:var(--navy-light);}
+
+footer{background:var(--navy);color:#3d5268;text-align:center;padding:22px;font-size:13px;border-top:2px solid rgba(201,168,76,.2);margin-top:60px;}
+footer span{color:var(--gold);}
+
+@media(max-width:700px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--navy);border-top:1px solid rgba(201,168,76,.2);padding:8px 0;z-index:99;}
+  .nav-links.open{display:flex;}
+  .nav-links a{height:auto;line-height:1;padding:13px 20px;border-bottom:none;margin:0;}
+  .hamburger{display:block;}
+  .fr{grid-template-columns:1fr;}
+  .hero{padding:50px 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="show('home');return false;">LegalEase LK
+      <span>25-26J-553 · SLIIT</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" id="nav-home" class="active" onclick="show('home');return false;">Home</a></li>
+      <li><a href="#" id="nav-domain" onclick="show('domain');return false;">Domain</a></li>
+      <li><a href="#" id="nav-milestones" onclick="show('milestones');return false;">Milestones</a></li>
+      <li><a href="#" id="nav-documents" onclick="show('documents');return false;">Documents</a></li>
+      <li><a href="#" id="nav-slides" onclick="show('slides');return false;">Presentations</a></li>
+      <li><a href="#" id="nav-about" onclick="show('about');return false;">About Us</a></li>
+      <li><a href="#" id="nav-contact" onclick="show('contact');return false;">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="heroBlock">
+  <div class="hero">
+    <div class="hero-badge">Individual Research Project · 2025 / 2026</div>
+    <h1>AI-Powered Civil Law Assistance Platform for Sri Lankan Citizens</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">LegalEase LK — Empowering everyday citizens with accessible, bilingual legal guidance powered by AI</p>
+    <p class="hero-name">Vimansa D. A. S &nbsp;·&nbsp; IT21346668</p>
+    <div class="hero-meta">
+      <div class="hmi"><span class="ml">Project ID</span><span class="mv">25-26J-553</span></div>
+      <div class="hmi"><span class="ml">Institution</span><span class="mv">SLIIT</span></div>
+      <div class="hmi"><span class="ml">Degree</span><span class="mv">BSc (Hons) IT</span></div>
+      <div class="hmi"><span class="ml">Supervisor</span><span class="mv">Ms. Uthpala Samarakoon</span></div>
+      <div class="hmi"><span class="ml">Year</span><span class="mv">2025 / 2026</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="sh">
+    <div class="sl">Overview</div>
+    <h2 class="st">Project Abstract</h2>
+  </div>
+  <div class="abs">
+    LegalEase LK is a legal assistance platform powered by AI, aimed at enhancing access to legal information for everyday citizens in Sri Lanka. Current platforms like LankaLAW and LawMate mainly cater to legal practitioners and lack straightforward, multilingual legal clarifications appropriate for the average person. This study seeks to address this issue by creating an accessible platform that delivers legal advice in Sinhala and English via a chatbot powered by a Large Language Model (LLM), as well as a lawyer referral system that assists users in locating suitable legal experts based on specialization and geography. The backend utilizes Node.js/Express, while the frontend employs React, guaranteeing scalability, performance, and user-friendliness. The system relies on selected legal data sources like <em>"Edineda Jiwithayata Neethiya"</em> to produce precise and comprehensible answers. The anticipated result is heightening legal awareness, better accessibility to lawyers, and strengthening public confidence in the justice system.
+  </div>
+  <div class="g3">
+    <div class="hc">
+      <div class="sl" style="margin-bottom:6px;">The Problem</div>
+      <h3>Inaccessible Legal Information</h3>
+      <p>Most Sri Lankan citizens struggle to understand their legal rights due to complex language and platforms designed only for legal professionals, leaving the public dependent on unreliable advice.</p>
+    </div>
+    <div class="hc t">
+      <div class="sl" style="margin-bottom:6px;color:var(--teal);">The Solution</div>
+      <h3>AI-Powered Legal Chatbot</h3>
+      <p>A bilingual (Sinhala/English) conversational AI chatbot using a custom fine-tuned LLaMA 3 model trained on Sri Lankan civil law datasets for plain-language legal explanations.</p>
+    </div>
+    <div class="hc n">
+      <div class="sl" style="margin-bottom:6px;color:#4a8fa8;">Key Impact</div>
+      <h3>Smart Lawyer Matching</h3>
+      <p>A recommendation system that connects citizens with certified lawyers by specialization and geographic district — making legal help accessible even in rural areas.</p>
+    </div>
+  </div>
+  <div style="margin-top:26px;">
+    <div class="sl" style="margin-bottom:12px;">Civil Law Domains &amp; Technology Stack</div>
+    <div class="g2">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:4px;padding:18px 22px;">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:10px;">Domains Covered</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="background:var(--navy);color:var(--gold-light);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Property Law</span>
+          <span style="background:var(--navy);color:var(--gold-light);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Vehicles &amp; Highways</span>
+          <span style="background:var(--navy);color:var(--gold-light);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Marriage &amp; Divorce</span>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:4px;padding:18px 22px;">
+        <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:10px;">Technology Stack</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">LLaMA 3 8B</span>
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">React.js</span>
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Node.js / Express</span>
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">MongoDB Atlas</span>
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Supabase</span>
+          <span style="background:var(--teal-bg);color:var(--teal);font-size:12px;font-weight:600;padding:4px 12px;border-radius:2px;">Unsloth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN -->
+<section id="domain">
+  <div class="sh">
+    <div class="sl">Domain</div>
+    <h2 class="st">Research Domain</h2>
+    <p class="sd">Literature survey, research gap, problem statement, objectives, and methodology.</p>
+  </div>
+
+  <div class="dc">
+    <h3>Background &amp; Literature Survey</h3>
+    <p>Access to legal information in Sri Lanka has long been limited for ordinary citizens who struggle to interpret legal documents and understand their rights. Although digital legal platforms exist — such as LankaLAW and LawMate — they are primarily designed for lawyers, researchers, and law students, and do not offer multilingual support or plain-language guidance for the general public.</p>
+    <p style="margin-top:8px;">Internationally, AI has been adopted in legal domains through platforms such as DoNotPay, LawDroid, and LegalZoom. However, these systems are built around Western legal frameworks and do not apply to Sri Lankan law or local languages. LegalEase LK bridges this gap using LLM-based conversational models, information retrieval systems, and modern web frameworks like React and Node.js.</p>
+  </div>
+
+  <div class="dc">
+    <h3>Research Gap</h3>
+    <ul>
+      <li>No Sri Lankan platform provides citizen-friendly legal explanations in Sinhala or English via an AI conversational interface.</li>
+      <li>Existing systems (LankaLAW, LawMate) use professional terminology inaccessible to the general public.</li>
+      <li>No platform integrates a lawyer recommendation mechanism matching users with professionals by location and specialization.</li>
+      <li>International legal AI systems focus on Western legal frameworks and do not apply to Sri Lankan law.</li>
+      <li>Current tools focus on professionals rather than public legal education, leaving a wide gap in legal awareness and accessibility.</li>
+    </ul>
+  </div>
+
+  <div class="dc">
+    <h3>Research Problem</h3>
+    <p>Ordinary Sri Lankan citizens struggle to access and understand legal information due to complex legal language and professional-focused platforms. Existing digital legal systems are designed mainly for lawyers and students and do not provide simple, multilingual explanations or conversational support. As a result, people lack legal awareness, depend on unreliable advice, and face difficulties finding suitable lawyers, especially in rural areas. This highlights the need for an accessible, AI-powered legal assistance platform tailored for the general public.</p>
+  </div>
+
+  <div class="dc">
+    <h3>Research Objectives</h3>
+    <p style="margin-bottom:8px;"><strong style="color:var(--navy);">Main Objective:</strong> To design and develop an AI-powered, multilingual legal assistance platform that provides Sri Lankan citizens with simple, accessible legal information and helps them connect with suitable legal professionals.</p>
+    <ul>
+      <li>Develop a multilingual chatbot using LLaMA 3 8B that explains legal concepts in simple Sinhala and English.</li>
+      <li>Build a legal information retrieval mechanism delivering accurate responses based on Sri Lankan legal sources.</li>
+      <li>Create a lawyer recommendation system suggesting suitable lawyers by specialization and geographic location.</li>
+      <li>Design a user-friendly web interface using React and Node.js for easy public access.</li>
+      <li>Integrate "Edineda Jiwithayata Neethiya" (Parts 1–3) into a structured knowledge base for AI processing.</li>
+      <li>Evaluate the system's effectiveness through user testing, focusing on accuracy, usability, and legal awareness impact.</li>
+    </ul>
+  </div>
+
+  <div class="dc">
+    <h3>Methodology</h3>
+    <ol>
+      <li>User enters a legal question through the React web interface in Sinhala or English.</li>
+      <li>The question is securely sent to the Node.js/Express backend.</li>
+      <li>The custom fine-tuned LLaMA 3 8B model processes the question using vector similarity on the legal knowledge base.</li>
+      <li>The model identifies the law category and retrieves the most relevant legal sections from MongoDB.</li>
+      <li>The platform uses the identified category to fetch suitable lawyers from the lawyer database.</li>
+      <li>A clear legal explanation and best-matched lawyers are displayed to the user bilingually.</li>
+    </ol>
+  </div>
+
+  <div class="dc">
+    <h3>Technologies Used</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:10px;">
+      <div><div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">AI / ML</div><div style="font-size:14px;color:var(--muted);">LLaMA 3 8B (Unsloth fine-tuning), GGUF format, vector embeddings, sentence transformers, Retrieval-Augmented Generation (RAG)</div></div>
+      <div><div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Frontend</div><div style="font-size:14px;color:var(--muted);">React.js, HTML, CSS, JavaScript, Bootstrap / Material-UI</div></div>
+      <div><div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Backend</div><div style="font-size:14px;color:var(--muted);">Node.js, Express.js, REST API, ngrok API tunnel, Notification service</div></div>
+      <div><div style="font-weight:600;font-size:13px;color:var(--navy);margin-bottom:4px;">Database</div><div style="font-size:14px;color:var(--muted);">MongoDB Atlas (lawyers + qa_chunks collections), Supabase PostgreSQL</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section id="milestones">
+  <div class="sh">
+    <div class="sl">Milestones</div>
+    <h2 class="st">Project Milestones</h2>
+    <p class="sd">All project assessments with details, dates, and marks allocated.</p>
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Assessment</th><th>Description</th><th>Date</th><th style="text-align:center;">Marks</th><th style="text-align:center;">Status</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600;">Project Proposal</td><td>Problem statement, literature survey, objectives, and methodology defined.</td><td>Sep 2025</td><td style="text-align:center;">10%</td><td style="text-align:center;"><span class="b bd">Completed</span></td></tr>
+        <tr><td style="font-weight:600;">Progress Presentation I</td><td>LLM model training initiated; dataset preparation complete; system design finalized.</td><td>Nov 2025</td><td style="text-align:center;">15%</td><td style="text-align:center;"><span class="b bd">Completed</span></td></tr>
+        <tr><td style="font-weight:600;">Progress Presentation II</td><td>Chatbot integration, lawyer recommendation module, and frontend development progress.</td><td>Jan 2026</td><td style="text-align:center;">20%</td><td style="text-align:center;"><span class="b bd">Completed</span></td></tr>
+        <tr><td style="font-weight:600;">Final Assessment</td><td>Complete system demonstration with evaluation results and final documentation.</td><td>Apr 2026</td><td style="text-align:center;">40%</td><td style="text-align:center;"><span class="b bu">Upcoming</span></td></tr>
+        <tr><td style="font-weight:600;">Viva</td><td>Individual oral examination evaluating research depth and technical understanding.</td><td>May 2026</td><td style="text-align:center;">15%</td><td style="text-align:center;"><span class="b bp">Pending</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sl" style="margin-bottom:12px;">Development Phases</div>
+  <div class="g3">
+    <div style="background:#fff;border:1px solid var(--border);border-radius:4px;padding:16px 20px;"><div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:5px;">Phase 1 — Foundation</div><div style="font-size:13.5px;color:var(--muted);">Requirement analysis, dataset preparation (Edineda Jiwithayata Neethiya Parts 1–3), system architecture design</div></div>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:4px;padding:16px 20px;"><div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:5px;">Phase 2 — Development</div><div style="font-size:13.5px;color:var(--muted);">LLM fine-tuning with Unsloth, backend API, React frontend, chatbot integration, lawyer recommendation module</div></div>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:4px;padding:16px 20px;"><div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:5px;">Phase 3 — Evaluation</div><div style="font-size:13.5px;color:var(--muted);">Functional testing, user acceptance testing, performance evaluation, cloud deployment, final documentation</div></div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section id="documents">
+  <div class="sh">
+    <div class="sl">Documents</div>
+    <h2 class="st">Project Documents</h2>
+    <p class="sd">All produced documents and pending submissions.</p>
+  </div>
+  <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:12px;">Completed</div>
+  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Charter</div><div class="dm">Project initiation and scope — 1 document</div></div><span class="dl">View →</span></a>
+  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Proposal Report</div><div class="dm">Full research proposal — 25-26J-553 · IT21346668 · Sep 2025</div></div><span class="dl">View →</span></a>
+  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Check List Documents</div><div class="dm">Assessment checklists and supervisor review forms</div></div><span class="dl">View →</span></a>
+  <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:12px;margin-top:26px;">Pending</div>
+  <div class="di" style="opacity:.5;cursor:default;"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Final Research Document</div><div class="dm">Main thesis report — not yet submitted</div></div><span class="dl" style="color:var(--muted);">Pending</span></div>
+</section>
+
+<!-- PRESENTATIONS -->
+<section id="slides">
+  <div class="sh">
+    <div class="sl">Presentations</div>
+    <h2 class="st">Presentation Slides</h2>
+    <p class="sd">Slides from past presentations and provisions for upcoming ones.</p>
+  </div>
+  <div class="pg">
+    <div class="pc"><div class="pn">PP — 01</div><div class="pt">Project Proposal Presentation</div><div class="pd">Presented: December 2025</div><a href="#" class="pb">View Slides →</a></div>
+    <div class="pc"><div class="pn">PP — 02</div><div class="pt">Progress Presentation I</div><div class="pd">Presented: February 2025</div><a href="#" class="pb">View Slides →</a></div>
+    <div class="pc"><div class="pn">PP — 03</div><div class="pt">Progress Presentation II</div><div class="pd">Presented: March 2026</div><a href="#" class="pb">View Slides →</a></div>
+    <div class="pc dim"><div class="pn">PP — 04</div><div class="pt">Final Presentation</div><div class="pd">Scheduled: May 2026</div><a href="#" class="pb">Not Yet Available</a></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sh">
+    <div class="sl">Team</div>
+    <h2 class="st">About Us</h2>
+    <p class="sd">The researcher and supervisors behind LegalEase LK.</p>
+  </div>
+  <div class="sl" style="margin-bottom:12px;">Researcher</div>
+  <div class="mg" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:28px;">
+    <div class="mc">
+      <div class="av">VS</div>
+      <div class="mn">Vimansa D. A. S</div>
+      <div class="mid">IT21346668</div>
+      <div class="mr">BSc (Hons) in Information Technology<br>Specializing in Information Technology<br>Faculty of Computing, SLIIT</div>
+      <a href="mailto:it21346668@my.sliit.lk" class="me">it21346668@my.sliit.lk</a>
+    </div>
+  </div>
+  <div class="sl" style="margin-bottom:12px;">Supervisors</div>
+  <div class="sc">
+    <span class="sb">Supervisor</span>
+    <div>
+      <div class="sn">Ms. Uthpala Samarakoon</div>
+      <div class="sd2">Senior Lecturer · Faculty of Computing, SLIIT<br><a href="mailto:uthpala.s@sliit.lk" style="color:var(--gold);text-decoration:none;">uthpala.s@sliit.lk</a></div>
+    </div>
+  </div>
+  <div class="sc">
+    <span class="sb">External</span>
+    <div>
+      <div class="sn">Samadhi Bandara</div>
+      <div class="sd2">L.L.B. (Hons) Peradeniya &nbsp;·&nbsp; Attorney-at-Law of the Supreme Court &nbsp;·&nbsp; Public Notary &nbsp;·&nbsp; Commissioner for Oaths &nbsp;·&nbsp; Company Secretary</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sh">
+    <div class="sl">Contact</div>
+    <h2 class="st">Contact Us</h2>
+    <p class="sd">Get in touch with the project team.</p>
+  </div>
+  <div class="cg">
+    <div class="cic"><div class="cii"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg></div><div><div class="cit">Email</div><div class="civ">it21346668@my.sliit.lk</div></div></div>
+    <div class="cic"><div class="cii"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7-7.75 7-13c0-3.87-3.13-7-7-7zM12,11.5c-1.38,0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5,1.12 2.5,2.5-1.12,2.5-2.5,2.5z"/></svg></div><div><div class="cit">Location</div><div class="civ">Faculty of Computing, SLIIT, Malabe</div></div></div>
+    <div class="cic"><div class="cii"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,7V13L15.25,15.58L16,14.33L12.5,12.25V7H11Z"/></svg></div><div><div class="cit">Department</div><div class="civ">Information Technology, SLIIT</div></div></div>
+  </div>
+  <div class="fw">
+    <div class="fwt">Send a Message</div>
+    <div class="fr">
+      <div class="fg"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+    </div>
+    <div class="fg"><label>Subject</label><select><option value="">Select a subject</option><option>Project Inquiry</option><option>Research Collaboration</option><option>LegalEase LK Demo Request</option><option>Technical Question</option><option>Other</option></select></div>
+    <div class="fg"><label>Message</label><textarea placeholder="Your message here..."></textarea></div>
+    <button class="bs" onclick="this.textContent='Message Sent!';setTimeout(()=>this.textContent='Send Message',2500)">Send Message</button>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 <span>LegalEase LK &nbsp;·&nbsp; 25-26J-553 &nbsp;·&nbsp; Vimansa D. A. S &nbsp;·&nbsp; SLIIT</span>. All rights reserved.</p>
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('nav-'+id).classList.add('active');
+  document.getElementById('heroBlock').style.display=id==='home'?'':'none';
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+</script>
+</body>
+</html>

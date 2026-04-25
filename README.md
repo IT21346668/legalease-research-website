@@ -32,7 +32,7 @@ This repository hosts the official research project website for **25-26J-553**, 
 
 ## Live Site
 
-[https://your-username.github.io](https://your-username.github.io)
+https://it21346668.github.io/legalease-research-website/
 
 ---
 

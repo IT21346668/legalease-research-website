@@ -19,7 +19,9 @@ body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:var(--
 
 nav{background:var(--navy);position:sticky;top:0;z-index:100;border-bottom:2px solid var(--gold);}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;}
-.nav-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);text-decoration:none;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:9px;}
+.nav-logo-img{height:36px;width:36px;object-fit:contain;border-radius:6px;flex-shrink:0;}
+.nav-logo-text{display:flex;flex-direction:column;}
 .nav-logo span{display:block;font-family:'Source Sans 3',sans-serif;font-size:10px;color:#5a7a9a;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;}
 .nav-links{display:flex;list-style:none;}
 .nav-links a{display:block;padding:0 12px;height:60px;line-height:60px;color:#9aafca;text-decoration:none;font-size:13px;border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .2s,border-color .2s,background .2s;}
@@ -139,8 +141,9 @@ footer span{color:var(--gold);}
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo" onclick="show('home');return false;">LegalEase LK
-      <span>25-26J-553 · SLIIT</span>
+    <a href="#" class="nav-logo" onclick="show('home');return false;">
+      <img src="assets/images/ladyJusticeLogo.png" alt="LegalEase LK Logo" class="nav-logo-img">
+      <span class="nav-logo-text">LegalEase LK<span>25-26J-553 · SLIIT</span></span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#" id="nav-home" class="active" onclick="show('home');return false;">Home</a></li>
@@ -327,9 +330,9 @@ footer span{color:var(--gold);}
     <p class="sd">All produced documents and pending submissions.</p>
   </div>
   <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:12px;">Completed</div>
-  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Charter</div><div class="dm">Project initiation and scope — 1 document</div></div><span class="dl">View →</span></a>
-  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Proposal Report</div><div class="dm">Full research proposal — 25-26J-553 · IT21346668 · Sep 2025</div></div><span class="dl">View →</span></a>
-  <a href="#" class="di"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Check List Documents</div><div class="dm">Assessment checklists and supervisor review forms</div></div><span class="dl">View →</span></a>
+  <a href="assets/docs/project-charter.pdf" class="di" target="_blank"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Charter</div><div class="dm">Project initiation and scope — 1 document</div></div><span class="dl">View →</span></a>
+  <a href="assets/docs/project-proposal.pdf" class="di" target="_blank"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Project Proposal Report</div><div class="dm">Full research proposal — 25-26J-553 · IT21346668 · Sep 2025</div></div><span class="dl">View →</span></a>
+  <a href="assets/docs/checklist-documents.pdf" class="di" target="_blank"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Check List Documents</div><div class="dm">Assessment checklists and supervisor review forms</div></div><span class="dl">View →</span></a>
   <div style="font-family:'Playfair Display',serif;font-size:15px;color:var(--navy);margin-bottom:12px;margin-top:26px;">Pending</div>
   <div class="di" style="opacity:.5;cursor:default;"><div class="dico"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/></svg></div><div><div class="dn">Final Research Document</div><div class="dm">Main thesis report — not yet submitted</div></div><span class="dl" style="color:var(--muted);">Pending</span></div>
 </section>
@@ -342,9 +345,9 @@ footer span{color:var(--gold);}
     <p class="sd">Slides from past presentations and provisions for upcoming ones.</p>
   </div>
   <div class="pg">
-    <div class="pc"><div class="pn">PP — 01</div><div class="pt">Project Proposal Presentation</div><div class="pd">Presented: December 2025</div><a href="#" class="pb">View Slides →</a></div>
-    <div class="pc"><div class="pn">PP — 02</div><div class="pt">Progress Presentation I</div><div class="pd">Presented: February 2025</div><a href="#" class="pb">View Slides →</a></div>
-    <div class="pc"><div class="pn">PP — 03</div><div class="pt">Progress Presentation II</div><div class="pd">Presented: March 2026</div><a href="#" class="pb">View Slides →</a></div>
+    <div class="pc"><div class="pn">PP — 01</div><div class="pt">Project Proposal Presentation</div><div class="pd">Presented: December 2025</div><a href="assets/slides/pp01-proposal.pdf" class="pb" target="_blank">View Slides →</a></div>
+    <div class="pc"><div class="pn">PP — 02</div><div class="pt">Progress Presentation I</div><div class="pd">Presented: February 2025</div><a href="assets/slides/pp02-progress1.pdf" class="pb" target="_blank">View Slides →</a></div>
+    <div class="pc"><div class="pn">PP — 03</div><div class="pt">Progress Presentation II</div><div class="pd">Presented: March 2026</div><a href="assets/slides/pp03-progress2.pdf" class="pb" target="_blank">View Slides →</a></div>
     <div class="pc dim"><div class="pn">PP — 04</div><div class="pt">Final Presentation</div><div class="pd">Scheduled: May 2026</div><a href="#" class="pb">Not Yet Available</a></div>
   </div>
 </section>

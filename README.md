@@ -53,6 +53,17 @@ https://it21346668.github.io/legalease-research-website/
 ```
 ├── index.html       # Project website (all sections)
 └── README.md        # Project overview
+└── assets/
+    ├── images/
+    │   └── ladyJusticeLogo.png        ← Brand logo (Lady Justice)
+    ├── docs/
+    │   ├── project-charter.pdf        ← Place Project Charter PDF here
+    │   ├── project-proposal.pdf       ← Place Project Proposal Report PDF here
+    │   └── checklist-documents.pdf    ← Place Check List Documents PDF here
+    └── slides/
+        ├── pp01-proposal.pdf          ← Place PP-01 Proposal slides here
+        ├── pp02-progress1.pdf         ← Place PP-02 Progress I slides here
+        └── pp03-progress2.pdf         ← Place PP-03 Progress II slides here
 ```
 
 ---

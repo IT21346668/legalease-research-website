@@ -49,7 +49,7 @@ https://it21346668.github.io/legalease-research-website/
 
 The overall architecture of LegalEase LK consists of five interconnected components: Users & Data Input, AI Legal Q&A Processing, System Services, AI Legal Chat Interface, and the Lawyer & User Management System.
 
-<img width="100" height="300" alt="image" src="https://github.com/user-attachments/assets/293434d2-cbe4-4cc1-8fcf-f13960724c2b" />
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/293434d2-cbe4-4cc1-8fcf-f13960724c2b" />
 
 
 ---

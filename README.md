@@ -49,9 +49,7 @@ https://it21346668.github.io/legalease-research-website/
 
 The overall architecture of LegalEase LK consists of five interconnected components: Users & Data Input, AI Legal Q&A Processing, System Services, AI Legal Chat Interface, and the Lawyer & User Management System.
 
-<div align="center">
-  <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/293434d2-cbe4-4cc1-8fcf-f13960724c2b" />
-</div>
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/bc986a3a-db9c-4fbc-a018-4da7fd14fdc3" />
 
 
 ---
@@ -60,6 +58,7 @@ The overall architecture of LegalEase LK consists of five interconnected compone
 
 The use case diagram illustrates the interactions between three actors — Citizen, Lawyer, and Admin — and the 16 use cases supported by the platform.
 
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/54d5e51f-0a0c-464f-95db-cd810ad76db3" />
 
 
 ---
@@ -68,6 +67,7 @@ The use case diagram illustrates the interactions between three actors — Citiz
 
 This diagram shows the step-by-step flow of a citizen's legal question through the system: from the web interface through the server, AI model, and database, returning a bilingual answer.
 
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/a5ff9f58-32cf-417a-851d-5d7437bcb707" />
 
 ---
 
@@ -75,6 +75,7 @@ This diagram shows the step-by-step flow of a citizen's legal question through t
 
 This diagram shows how the system recommends suitable lawyers after processing a legal query, using the recommendation engine to filter and rank profiles from MongoDB by specialisation and experience.
 
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/3217a330-cf2f-442b-b982-7221f230300e" />
 
 ---
 
@@ -82,7 +83,7 @@ This diagram shows how the system recommends suitable lawyers after processing a
 
 The project follows the Agile Software Development Life Cycle (SDLC) using the Scrum framework. Development is organised into iterative sprints covering six phases: Requirements, Design, Development, Testing, Deployment, and Review & Retrospective.
 
-
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/ba9e092d-9a3d-482a-84f5-53f6787a4d0e" />
 
 ---
 
@@ -90,7 +91,7 @@ The project follows the Agile Software Development Life Cycle (SDLC) using the S
 
 The Work Breakdown Structure organises the full project scope into six phases — Requirements & Analysis, AI & Data, Frontend, Backend, Testing & QA, and Final Submission — each with three levels of sub-tasks.
 
-
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/bbfc41d8-9f86-4a97-8ad4-883bb82f50a2" />
 
 ---
 
@@ -98,7 +99,7 @@ The Work Breakdown Structure organises the full project scope into six phases �
 
 The Gantt Chart maps all project tasks and milestones across the full project timeline from December 2024 to June 2026, covering six submission phases with four key milestones: PP1, PP2, Final Submission, and Publication.
 
-
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/05dc3acc-c577-4e91-aa6d-91d7e6874cb9" />
 
 ---
 
